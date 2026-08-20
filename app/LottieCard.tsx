@@ -1,26 +1,11 @@
 "use client";
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      "lottie-player": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement>,
-        HTMLElement
-      > & {
-        src?: string;
-        autoplay?: boolean | string;
-        loop?: boolean | string;
-        speed?: string;
-        mode?: string;
-      };
-    }
-  }
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Player = "lottie-player" as any;
 
 export default function LottieCard({ src, style }: { src: string; style?: React.CSSProperties }) {
   return (
-    <lottie-player
+    <Player
       src={src}
       autoplay
       loop
