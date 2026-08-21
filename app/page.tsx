@@ -204,10 +204,10 @@ export default function Home() {
           <div
             className="fade-up"
             style={{
-              fontSize: 12,
-              fontWeight: 500,
+              fontSize: 13,
+              fontWeight: 400,
               letterSpacing: "0.14em",
-              color: ACCENT,
+              color: WHITE,
               textTransform: "uppercase" as const,
               marginBottom: 28,
               display: "flex",
@@ -227,10 +227,10 @@ export default function Home() {
           <h1
             className="h1-big fade-up"
             style={{
-              fontSize: 96,
+              fontSize: 120,
               fontWeight: 700,
               letterSpacing: "-0.04em",
-              lineHeight: 0.95,
+              lineHeight: 0.92,
               margin: "0 0 20px",
             }}
           >
