@@ -114,7 +114,7 @@ export default function Home() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 64px",
+          padding: "20px 96px",
           backdropFilter: "blur(24px) saturate(180%)",
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
           background: "oklch(14% 0.055 255 / 0.85)",
@@ -172,7 +172,7 @@ export default function Home() {
         className="section-pad hero-grid"
         style={{
           position: "relative",
-          padding: "80px 64px",
+          padding: "80px 96px",
           maxWidth: 1440,
           margin: "0 auto",
           display: "grid",
@@ -338,7 +338,7 @@ export default function Home() {
       <section
         id="about"
         className="section-pad"
-        style={{ padding: "110px 64px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "110px 96px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div
           className="about-grid"
@@ -470,7 +470,7 @@ export default function Home() {
       <section
         id="work"
         className="section-pad"
-        style={{ padding: "0 64px 110px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "0 96px 110px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div
           className="reveal"
@@ -585,7 +585,7 @@ export default function Home() {
       <section
         id="experience"
         className="section-pad"
-        style={{ padding: "0 64px 110px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "0 96px 110px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div
           className="reveal"
@@ -701,7 +701,7 @@ export default function Home() {
       {/* ── CTA BANNER ── */}
       <section
         className="section-pad reveal"
-        style={{ padding: "0 64px 110px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "0 96px 110px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div
           style={{
@@ -771,7 +771,7 @@ export default function Home() {
       {/* ── LATEST WORKS ── */}
       <section
         className="section-pad"
-        style={{ padding: "0 64px 110px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "0 96px 110px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div className="reveal" style={{ textAlign: "center" as const, marginBottom: 48 }}>
           <Label>Portfolio</Label>
@@ -849,7 +849,7 @@ export default function Home() {
       <section
         id="skills"
         className="section-pad"
-        style={{ padding: "0 64px 110px", maxWidth: 1440, margin: "0 auto" }}
+        style={{ padding: "0 96px 110px", maxWidth: 1440, margin: "0 auto" }}
       >
         <div className="reveal" style={{ textAlign: "center" as const, marginBottom: 48 }}>
           <Label>Skills</Label>
@@ -928,7 +928,7 @@ export default function Home() {
       <section
         className="section-pad edu-grid"
         style={{
-          padding: "0 64px 110px",
+          padding: "0 96px 110px",
           maxWidth: 1440,
           margin: "0 auto",
           display: "grid",
@@ -1062,7 +1062,7 @@ export default function Home() {
         className="reveal"
         style={{
           background: DARK,
-          padding: "110px 64px",
+          padding: "110px 96px",
           textAlign: "center" as const,
           position: "relative" as const,
           overflow: "hidden",
@@ -1190,7 +1190,7 @@ export default function Home() {
       <footer
         className="section-pad"
         style={{
-          padding: "32px 64px",
+          padding: "32px 96px",
           background: DARK,
           color: "oklch(55% 0.008 85)",
           display: "flex",

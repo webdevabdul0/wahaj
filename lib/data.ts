@@ -1,4 +1,4 @@
-export const ACCENT = "oklch(52% 0.24 255)";
+export const ACCENT = "oklch(65% 0.22 228)";
 
 export const stripProjects = [
   { id: "proj-ogdcl",    name: "OGDCL House, Islamabad",            tag: "Electrical & Planning" },
