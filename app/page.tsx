@@ -12,12 +12,13 @@ import {
   certifications,
 } from "@/lib/data";
 
-const BG     = "oklch(97% 0.012 85)";
-const BG2    = "oklch(93.5% 0.010 82)";
-const DARK   = "oklch(16% 0.008 80)";
-const MUTED  = "oklch(48% 0.010 80)";
-const TEXT   = "oklch(36% 0.011 80)";
-const BORDER = "oklch(88% 0.008 85)";
+const BG     = "oklch(14% 0.055 255)";
+const BG2    = "oklch(19% 0.058 255)";
+const DARK   = "oklch(10% 0.038 255)";
+const MUTED  = "oklch(55% 0.030 255)";
+const TEXT   = "oklch(74% 0.018 255)";
+const BORDER = "oklch(28% 0.065 255)";
+const WHITE  = "oklch(95% 0.005 80)";
 
 /* Map project id → public image path */
 const projImages: Record<string, string> = {
@@ -38,8 +39,8 @@ function Pill({ children }: { children: React.ReactNode }) {
         fontWeight: 500,
         padding: "6px 14px",
         borderRadius: 999,
-        background: BG2,
-        color: "oklch(32% 0.011 80)",
+        background: "oklch(26% 0.065 255)",
+        color: "oklch(80% 0.025 255)",
         whiteSpace: "nowrap" as const,
         display: "inline-block",
       }}
@@ -75,7 +76,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
         letterSpacing: "-0.025em",
         margin: 0,
         lineHeight: 1.15,
-        color: DARK,
+        color: WHITE,
       }}
     >
       {children}
@@ -116,7 +117,7 @@ export default function Home() {
           padding: "20px 64px",
           backdropFilter: "blur(24px) saturate(180%)",
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
-          background: "oklch(97% 0.012 85 / 0.82)",
+          background: "oklch(14% 0.055 255 / 0.85)",
         }}
       >
         <div style={{ display: "flex", alignItems: "center" }}>
@@ -154,8 +155,8 @@ export default function Home() {
               gap: 6,
               padding: "9px 20px",
               borderRadius: 999,
-              background: DARK,
-              color: "oklch(96% 0.008 85)",
+              background: ACCENT,
+              color: WHITE,
               fontSize: 13,
               fontWeight: 500,
               letterSpacing: "0.01em",
@@ -192,7 +193,7 @@ export default function Home() {
                   fontSize: 34,
                   fontWeight: 600,
                   letterSpacing: "-0.03em",
-                  color: DARK,
+                  color: WHITE,
                   lineHeight: 1,
                 }}
               >
@@ -213,8 +214,8 @@ export default function Home() {
               height: 34,
               padding: "0 16px",
               borderRadius: 999,
-              background: BG2,
-              color: "oklch(34% 0.010 80)",
+              background: "oklch(22% 0.065 255)",
+              color: "oklch(78% 0.020 255)",
               fontSize: 13,
               fontWeight: 400,
             }}
@@ -308,8 +309,8 @@ export default function Home() {
                 style={{
                   padding: "14px 26px",
                   borderRadius: 999,
-                  background: DARK,
-                  color: "oklch(96% 0.008 85)",
+                  background: ACCENT,
+                  color: WHITE,
                   fontSize: 14,
                   fontWeight: 500,
                 }}
@@ -321,10 +322,10 @@ export default function Home() {
                 style={{
                   padding: "14px 26px",
                   borderRadius: 999,
-                  border: `1.5px solid oklch(74% 0.010 80)`,
+                  border: `1.5px solid ${BORDER}`,
                   fontSize: 14,
                   fontWeight: 500,
-                  color: DARK,
+                  color: WHITE,
                 }}
               >
                 Get in touch
@@ -379,7 +380,7 @@ export default function Home() {
                 letterSpacing: "-0.025em",
                 lineHeight: 1.2,
                 margin: "0 0 20px",
-                color: DARK,
+                color: WHITE,
               }}
             >
               Precision on paper.
@@ -417,7 +418,7 @@ export default function Home() {
                 style={{
                   fontSize: 13,
                   lineHeight: 1.55,
-                  color: "oklch(68% 0.010 85)",
+                  color: "oklch(62% 0.030 255)",
                   marginTop: 10,
                   fontWeight: 400,
                 }}
@@ -459,7 +460,7 @@ export default function Home() {
                     height: 34,
                     flexShrink: 0,
                     borderRadius: 10,
-                    background: BG2,
+                    background: "oklch(24% 0.07 255)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -524,7 +525,7 @@ export default function Home() {
                     fontSize: 15,
                     fontWeight: 500,
                     marginBottom: 4,
-                    color: DARK,
+                    color: WHITE,
                     letterSpacing: "-0.01em",
                   }}
                 >
@@ -674,7 +675,7 @@ export default function Home() {
                     style={{
                       fontSize: 18,
                       fontWeight: 600,
-                      color: DARK,
+                      color: WHITE,
                       letterSpacing: "-0.02em",
                     }}
                   >
@@ -686,7 +687,7 @@ export default function Home() {
                     fontSize: 12,
                     color: MUTED,
                     fontWeight: 400,
-                    background: BG,
+                    background: "oklch(24% 0.065 255)",
                     padding: "6px 14px",
                     borderRadius: 999,
                     flexShrink: 0,
@@ -751,7 +752,7 @@ export default function Home() {
               fontSize: 11,
               fontWeight: 500,
               letterSpacing: "0.12em",
-              color: "oklch(68% 0.015 60)",
+              color: "oklch(62% 0.030 255)",
               textTransform: "uppercase" as const,
               marginBottom: 16,
             }}
@@ -832,7 +833,7 @@ export default function Home() {
                     fontSize: 15,
                     fontWeight: 500,
                     letterSpacing: "-0.01em",
-                    color: DARK,
+                    color: WHITE,
                   }}
                 >
                   {proj.name}
@@ -902,7 +903,7 @@ export default function Home() {
                   fontSize: 72,
                   fontWeight: 600,
                   lineHeight: 1,
-                  color: "oklch(91% 0.009 82)",
+                  color: "oklch(24% 0.065 255)",
                   userSelect: "none" as const,
                   pointerEvents: "none" as const,
                   letterSpacing: "-0.04em",
@@ -915,7 +916,7 @@ export default function Home() {
                   fontSize: 14,
                   fontWeight: 600,
                   marginBottom: 14,
-                  color: DARK,
+                  color: WHITE,
                   letterSpacing: "-0.01em",
                   position: "relative" as const,
                 }}
@@ -931,7 +932,7 @@ export default function Home() {
                       fontWeight: 400,
                       padding: "7px 13px",
                       borderRadius: 999,
-                      background: "oklch(97% 0.008 85)",
+                      background: "oklch(24% 0.065 255)",
                       color: TEXT,
                     }}
                   >
@@ -964,7 +965,7 @@ export default function Home() {
               fontWeight: 600,
               letterSpacing: "-0.02em",
               margin: "0 0 24px",
-              color: DARK,
+              color: WHITE,
             }}
           >
             Academic background
@@ -992,7 +993,7 @@ export default function Home() {
                     fontSize: 16,
                     fontWeight: 500,
                     marginBottom: 4,
-                    color: DARK,
+                    color: WHITE,
                     letterSpacing: "-0.01em",
                   }}
                 >
@@ -1024,7 +1025,7 @@ export default function Home() {
               fontWeight: 600,
               letterSpacing: "-0.02em",
               margin: "0 0 24px",
-              color: DARK,
+              color: WHITE,
             }}
           >
             Continued learning
@@ -1049,7 +1050,7 @@ export default function Home() {
                       fontSize: 14,
                       fontWeight: 500,
                       marginBottom: 3,
-                      color: DARK,
+                      color: WHITE,
                       letterSpacing: "-0.005em",
                     }}
                   >

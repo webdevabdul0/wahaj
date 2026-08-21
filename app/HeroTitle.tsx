@@ -44,7 +44,7 @@ export default function HeroTitle() {
         letterSpacing: "-0.045em",
         fontWeight: 600,
         margin: "0 0 24px",
-        color: "oklch(16% 0.008 80)",
+        color: "oklch(95% 0.005 80)",
       }}
     >
       Engineered
