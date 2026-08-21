@@ -169,189 +169,168 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section
-        className="section-pad"
-        style={{ position: "relative", padding: "48px 64px 0", maxWidth: 1440, margin: "0 auto" }}
+        className="section-pad hero-grid"
+        style={{
+          position: "relative",
+          padding: "80px 64px",
+          maxWidth: 1440,
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "1fr 0.75fr",
+          alignItems: "center",
+          minHeight: "calc(100vh - 80px)",
+          gap: 40,
+        }}
       >
-        {/* Top stats row */}
+        {/* Subtle ambient glow */}
         <div
-          className="fade-up"
           style={{
-            display: "flex",
-            gap: 48,
-            marginBottom: 14,
-            flexWrap: "wrap" as const,
-            alignItems: "center",
+            position: "absolute",
+            top: "20%",
+            right: "20%",
+            width: 520,
+            height: 520,
+            borderRadius: "50%",
+            background: `radial-gradient(circle, oklch(55% 0.22 255 / 0.12) 0%, transparent 70%)`,
+            pointerEvents: "none",
+            filter: "blur(70px)",
+            zIndex: 0,
           }}
-        >
-          {[
-            { num: "4+", label: "Years in the field" },
-            { num: "9+", label: "Projects delivered" },
-          ].map(({ num, label }) => (
-            <div key={label}>
-              <div
-                style={{
-                  fontSize: 34,
-                  fontWeight: 600,
-                  letterSpacing: "-0.03em",
-                  color: WHITE,
-                  lineHeight: 1,
-                }}
-              >
-                {num}
-              </div>
-              <div style={{ fontSize: 12, color: MUTED, marginTop: 4, fontWeight: 400 }}>
-                {label}
-              </div>
-            </div>
-          ))}
+        />
 
+        {/* Left: text */}
+        <div style={{ position: "relative", zIndex: 2 }}>
+          {/* Role label */}
           <div
+            className="fade-up"
             style={{
-              marginLeft: "auto",
-              display: "inline-flex",
+              fontSize: 12,
+              fontWeight: 500,
+              letterSpacing: "0.14em",
+              color: ACCENT,
+              textTransform: "uppercase" as const,
+              marginBottom: 28,
+              display: "flex",
               alignItems: "center",
-              gap: 8,
-              height: 34,
-              padding: "0 16px",
-              borderRadius: 999,
-              background: "oklch(22% 0.065 255)",
-              color: "oklch(78% 0.020 255)",
-              fontSize: 13,
-              fontWeight: 400,
+              gap: 10,
+              flexWrap: "wrap" as const,
             }}
           >
             <span
               className="blink"
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: "50%",
-                background: ACCENT,
-                display: "inline-block",
-              }}
+              style={{ width: 6, height: 6, borderRadius: "50%", background: ACCENT, display: "inline-block", flexShrink: 0 }}
             />
-            Open to power systems &amp; EPC roles
+            Electrical Engineer · BMS &amp; ELV · LV/MV/HV Systems
+          </div>
+
+          {/* Big name */}
+          <h1
+            className="h1-big fade-up"
+            style={{
+              fontSize: 96,
+              fontWeight: 700,
+              letterSpacing: "-0.04em",
+              lineHeight: 0.95,
+              margin: "0 0 20px",
+            }}
+          >
+            <span style={{ color: ACCENT }}>Wahaj</span>
+            <br />
+            <span style={{ color: WHITE }}>Ul Islam.</span>
+          </h1>
+
+          {/* Accent rule */}
+          <div
+            className="fade-up"
+            style={{ width: 52, height: 4, background: ACCENT, borderRadius: 99, margin: "20px 0 28px" }}
+          />
+
+          {/* Description */}
+          <p
+            className="fade-up-slow"
+            style={{
+              fontSize: 17,
+              lineHeight: 1.7,
+              color: TEXT,
+              maxWidth: 460,
+              margin: "0 0 44px",
+              fontWeight: 400,
+            }}
+          >
+            Specializing in power systems, LV/MV/HV site execution, and BMS &amp; ELV
+            integration for large-scale EPC projects across the globe.
+          </p>
+
+          {/* CTA buttons */}
+          <div
+            className="fade-up-delay"
+            style={{
+              display: "flex",
+              gap: 14,
+              alignItems: "center",
+              flexWrap: "wrap" as const,
+            }}
+          >
+            <a
+              href="/Wahaj-Ul-Islam-Resume.pdf"
+              download="Wahaj-Ul-Islam-Resume.pdf"
+              style={{
+                padding: "14px 28px",
+                borderRadius: 10,
+                background: ACCENT,
+                color: WHITE,
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
+              Download Résumé
+            </a>
+            <a
+              href="#contact"
+              style={{
+                padding: "13px 28px",
+                borderRadius: 10,
+                border: `2px solid ${ACCENT}`,
+                color: ACCENT,
+                fontSize: 14,
+                fontWeight: 500,
+              }}
+            >
+              Get in touch
+            </a>
+            <a
+              href="#work"
+              style={{
+                padding: "13px 28px",
+                borderRadius: 10,
+                border: `1.5px solid ${BORDER}`,
+                color: TEXT,
+                fontSize: 14,
+                fontWeight: 500,
+              }}
+            >
+              View Projects
+            </a>
           </div>
         </div>
 
-        {/* Hero card */}
+        {/* Right: headshot floating on dark bg */}
         <div
-          className="hero-grid scale-in"
+          className="hero-img scale-in"
           style={{
             position: "relative",
-            borderRadius: 32,
-            overflow: "hidden",
-            background: BG2,
-            minHeight: 600,
-            display: "grid",
-            gridTemplateColumns: "1.05fr 0.95fr",
-            alignItems: "end",
+            height: 620,
+            zIndex: 1,
           }}
         >
-          {/* Ambient glow orbs */}
-          <div
-            style={{
-              position: "absolute",
-              top: -120,
-              left: -120,
-              width: 560,
-              height: 560,
-              borderRadius: "50%",
-              background: `radial-gradient(circle, oklch(65% 0.16 255 / 0.12) 0%, transparent 68%)`,
-              pointerEvents: "none",
-              zIndex: 0,
-              filter: "blur(40px)",
-            }}
+          <Image
+            src="/headshot.png"
+            alt="Wahaj Ul Islam"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 45vw"
+            style={{ objectFit: "contain", objectPosition: "bottom center" }}
           />
-          <div
-            style={{
-              position: "absolute",
-              bottom: -80,
-              right: "30%",
-              width: 320,
-              height: 320,
-              borderRadius: "50%",
-              background: `radial-gradient(circle, oklch(65% 0.14 255 / 0.08) 0%, transparent 70%)`,
-              pointerEvents: "none",
-              zIndex: 0,
-              filter: "blur(40px)",
-            }}
-          />
-
-          {/* Left: text */}
-          <div style={{ position: "relative", zIndex: 2, padding: "52px 24px 52px 52px" }}>
-            <HeroTitle />
-            <p
-              style={{
-                fontSize: 17,
-                lineHeight: 1.65,
-                color: TEXT,
-                maxWidth: 420,
-                margin: "0 0 32px",
-                fontWeight: 400,
-              }}
-            >
-              I'm Wahaj — an Electrical Engineer specializing in power systems,
-              LV/MV/HV site execution, and BMS &amp; ELV integration for
-              large-scale EPC projects.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: 12,
-                alignItems: "center",
-                flexWrap: "wrap" as const,
-              }}
-            >
-              <a
-                href="/Wahaj-Ul-Islam-Resume.pdf"
-                download="Wahaj-Ul-Islam-Resume.pdf"
-                style={{
-                  padding: "14px 26px",
-                  borderRadius: 999,
-                  background: ACCENT,
-                  color: WHITE,
-                  fontSize: 14,
-                  fontWeight: 500,
-                }}
-              >
-                Download Résumé
-              </a>
-              <a
-                href="#contact"
-                style={{
-                  padding: "14px 26px",
-                  borderRadius: 999,
-                  border: `1.5px solid ${BORDER}`,
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: WHITE,
-                }}
-              >
-                Get in touch
-              </a>
-            </div>
-          </div>
-
-          {/* Right: headshot */}
-          <div
-            className="hero-img"
-            style={{
-              position: "relative",
-              alignSelf: "stretch",
-              minHeight: 600,
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/headshot.png"
-              alt="Wahaj Ul Islam"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 48vw"
-              style={{ objectFit: "cover", objectPosition: "center top" }}
-            />
-          </div>
         </div>
       </section>
 

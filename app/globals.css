@@ -139,7 +139,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .hero-grid     { grid-template-columns: 1fr !important; }
+  .hero-grid     { grid-template-columns: 1fr !important; min-height: auto !important; }
   .about-grid    { grid-template-columns: 1fr !important; }
   .strip-grid    { grid-template-columns: 1fr !important; }
   .featured-grid { grid-template-columns: 1fr 1fr !important; }
