@@ -1,31 +1,27 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Wahaj Ul Islam — Electrical Engineer",
   description:
-    "Portfolio of Wahaj Ul Islam, an Electrical Engineer specialising in power systems, LV/MV/HV site execution, and BMS & ELV integration for large-scale EPC projects.",
+    "Wahaj Ul Islam — Electrical Engineer specializing in LV/MV/HV power systems, NESPAK & NTDC compliance, BMS/ELV systems, and electrical estimation.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={dmSans.variable}>
-      <body>
-        {children}
-        <Script
-          src="https://unpkg.com/@lottiefiles/lottie-player@2.0.3/dist/lottie-player.js"
-          strategy="lazyOnload"
+    <html lang="en">
+      <head>
+        <meta name="theme-color" content="#050507" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://upload.wikimedia.org" crossOrigin="" />
+        <link rel="preconnect" href="https://thumb.wikimedia.org" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
         />
-      </body>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

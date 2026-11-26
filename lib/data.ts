@@ -8,7 +8,7 @@ export const stripProjects = [
 
 export const experience = [
   {
-    period: "Jul 2026 – Present",
+    period: "Aug 2026 – Present",
     role: "Electrical Engineer",
     company: "Inaam Energy Corporation, Lahore",
     summary:
@@ -16,7 +16,7 @@ export const experience = [
     tags: ["LV/MV/HV", "EPC"],
   },
   {
-    period: "Jan 2025 – Jun 2026",
+    period: "Jan 2025 – Jul 2026",
     role: "Electrical Engineer",
     company: "AL Awan Electric Works & Construction Co, Lahore",
     summary:
@@ -77,20 +77,22 @@ export const education = [
     period: "Sep 2025 – Present",
     degree: "Master's in Electrical Engineering",
     school: "University of Engineering & Technology, Lahore",
-    detail:
-      'Power Systems & Building Engineering · Thesis: "Intelligent, Occupancy-Aware Energy Management in Buildings"',
+    stream: "Power Systems & Building Engineering",
+    researchLabel: "Thesis",
+    researchTitle: "Intelligent, Occupancy-Aware Energy Management in Buildings",
   },
   {
     period: "Oct 2018 – Aug 2022",
     degree: "Bachelor's in Electrical Engineering",
     school: "University of Engineering & Technology, Lahore",
-    detail:
-      'Industrial Automation & Renewable Energy · FYP: "Reverse Vending Machine Using SSD & Deep Learning Algorithms"',
+    stream: "Industrial Automation & Renewable Energy",
+    researchLabel: "FYP",
+    researchTitle: "Reverse Vending Machine Using SSD & Deep Learning Algorithms",
   },
 ];
 
 export const certifications = [
   { name: "Industrial Power Systems Analysis and Stability Specialization", issuer: "Coursera", period: "Nov – Dec 2026" },
-  { name: "Engineering Project Management Specialization",                  issuer: "Coursera", period: "Sep – Oct 2026" },
-  { name: "Building Energy Systems Engineering Specialization",             issuer: "Coursera", period: "Jul – Aug 2026" },
+  { name: "Engineering Project Management Specialization",                  issuer: "Coursera", period: "Jul – Aug 2026" },
+  { name: "Building Energy Systems Engineering Specialization",             issuer: "Coursera", period: "Sep – Oct 2026" },
 ];
